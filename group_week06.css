@@ -1,0 +1,119 @@
+/* Note: Screens should be different 
+  when it is 500(small), 1000(medium), or 1300(large) pixels wide.*/
+
+
+
+/* Section1 flex_first */
+#flex_first {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto auto auto;
+}
+
+/* Section2 flex_second */
+#flex_second {
+  display: flex;
+  flex-direction: column;
+}
+
+#flex_second input, textarea, select, fieldset label, button {
+  width: 100%;
+}
+
+button {
+  background-color: chocolate;
+  width: 100%;
+}
+
+/* Section3 grid_first */
+#grid_first {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  #grid_first {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  #grid_first {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #grid_first {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+
+/* Section4 grid_second */
+
+#grid_second {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+[class*="box"] {
+  min-height: 100px;
+}
+
+
+.box9 {
+  display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+  #grid_second {
+    grid-template-columns: 1fr;
+  }
+
+  .box9 {
+    flex-flow: column;
+    height: auto;
+    display: space-evenly;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  #grid_second {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .box1 {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .box8 {
+    height: auto;
+  }
+
+  .box9 {
+    flex-wrap: wrap;
+    height: auto;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #grid_second {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .box1 {
+    grid-template-columns: span 3;
+    grid-template-rows: span 2;
+  }
+
+  .box9 {
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+  }
+}
