@@ -1,0 +1,32 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #203241;
+}
+
+header {
+    padding: 10px;
+    border-bottom: 1px solid #203241;
+}
+
+main {
+    text-align: center;
+}
+
+h3 {
+    color: #3b5c78;
+}
+
+input, button {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+input {
+    width: 200px;
+    text-align: center;
+}
+
+footer {
+    color: gray;
+    font-size: small;
+    border-top: 1px solid gray;
+}
